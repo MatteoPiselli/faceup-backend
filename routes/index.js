@@ -7,7 +7,7 @@ const fs = require("fs");
 
 router.post("/upload", async (req, res) => {
   // créer un chemin d'adresse temporaite avec un id
-  const photoPath = `./tmp/${uniqid()}.jpg`;
+  const photoPath = `/tmp/${uniqid()}.jpg`;
   // copier le photoFormFront du front et je le mets dans le dossier /tmp/...
   const resultMove = await req.files.photoFromFront.mv(photoPath);
 
